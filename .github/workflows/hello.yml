@@ -12,6 +12,17 @@ jobs:
       - name: Check out step
         uses: actions/checkout@v3
     
+      - name: set up python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+      
+      - name: install pytest
+        run: pip install pytest
+
+      - name: run pytest
+        run: pytest
+    
       - name: print python version
         run: python --version
 
