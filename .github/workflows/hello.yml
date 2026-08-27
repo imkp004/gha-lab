@@ -8,6 +8,12 @@ jobs:
     steps:
       - name: Print a message
         run: echo "The robot is awake"
+     
+      - name: Check out step
+        uses: actions/checkout@v3
+    
+      - name: print python version
+        run: python --version
 
       - name: Look around the machine
         run: pwd && ls -la
